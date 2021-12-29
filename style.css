@@ -36,11 +36,11 @@ body {
 }
 
 .quote-sign {
-	font-size: 3rem;
+	font-size: 4rem;
 }
 
 .quote-author {
-	margin-top: 15px;
+	margin-top: 20px;
 	font-size: 2rem;
 	font-weight: 300;
 	font-style: italic;
