@@ -18,6 +18,14 @@ body {
 	justify-content: center;
 }
 
+hr {
+	width: 30%;
+	height: 1px;
+	color: #190b31;
+	background: #190b31;
+	border: none;
+}
+
 .quote-container {
 	width: auto;
 	max-width: 900px;
@@ -25,14 +33,6 @@ body {
 	border-radius: 10px;
 	background-color: rgba(255, 255, 255, 0.4);
 	box-shadow: 0 10px 10px 10px rgba(25, 11, 49, 0.2);
-}
-
-hr {
-	width: 30%;
-	height: 1px;
-	color: #190b31;
-	background: #190b31;
-	border: none;
 }
 
 .quote-text {
@@ -88,6 +88,21 @@ button:active {
 
 .fa-twitter {
 	font-size: 1.5rem;
+}
+
+/* Loader */
+.loader {
+	border: 16px solid #a0c0f6b4; 
+	border-top: 16px solid #190b31; 
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+}
+  
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
 }
 
 /* Media Query: Tablet or Smaller */
