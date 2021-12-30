@@ -1,4 +1,9 @@
-// Get qoutes from API
+const quoteContainer = document.getElementById('quote-conteiner');
+const quoteText = document.getElementById('quote');
+const authorText = document.getElementById('author');
+const twitterBtn = document.getElementById('twitter');
+const newQuoteBtn = document.getElementById('new-qoute');
+
 let apiQuotes = [];
 
 //Show new Quote
