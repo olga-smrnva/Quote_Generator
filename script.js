@@ -8,10 +8,23 @@ let apiQuotes = [];
 
 //Show new Quote
 function newQuote() {
+	//Generate new quote
 	const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-	authorText.textContent = quote.author;
+	//Check if there's an author 
+	if (!quote.author) {
+		authorText.textContent = 'Unknown';
+	} else {
+		authorText.textContent = quote.author;
+	};
+	//Check quote lenght to determine styling
+	if (quote.text.length > 50) {
+		quoteText.classList.add('long-quote');
+	} else {
+		quoteText.classList.remove('long-quote');
+	};
+	//Show quote
 	quoteText.textContent = quote.text;
-}
+};
 
 async function getQuotes() {
 	const apiUrl = 'https://type.fit/api/quotes';
