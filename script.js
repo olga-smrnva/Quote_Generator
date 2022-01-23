@@ -7,21 +7,19 @@ const loader = document.getElementById('loader');
 
 let apiQuotes = [];
 
-//Show loading
-function loading() {
+function showLoadingSpinner() {
 	loader.hidden = false;
 	quoteContainer.hidden = true;
 };
-
-//Hide loading
-function complete() {
+ 
+function removeLoadingSpinner() {
 	loader.hidden = true;
 	quoteContainer.hidden = false;
 };
 
 //Show new Quote
 function newQuote() {
-	loading();
+	showLoadingSpinner();
 	//Generate new quote
 	const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
 	//Check if there's an author 
@@ -36,12 +34,12 @@ function newQuote() {
 	} else {
 		quoteText.classList.remove('long-quote');
 	};
-	//Set quote, hide loader
+
 	quoteText.textContent = quote.text;
-	complete();
+	removeLoadingSpinner();
 };
 
-async function getQuotes() {
+async  function getQuotes() {
 	loading();
 	const apiUrl = 'https://type.fit/api/quotes';
 	try {
